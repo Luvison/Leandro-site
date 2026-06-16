@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leandro Soares Assunção Rafael — Pesquisador, Lazer e Relações Étnico-Raciais</title>
+<meta name="description" content="Leandro Soares Assunção Rafael — Doutorando em Estudos do Lazer (UFMG). Pesquisa relações étnico-raciais, juventudes negras, hip hop e recreio escolar. Host do podcast Papo de Escola.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #161312;
+    --red: #C81D25;
+    --red-soft: #E2453F;
+    --gold: #E8B324;
+    --gold-soft: #F2CC5D;
+    --cream: #F5EFE3;
+    --cream-deep: #EAE0CA;
+    --paper: #FBF8F1;
+    --line: rgba(22,19,18,0.12);
+    --max: 1080px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  a { color: var(--red); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Nav ---------- */
+  header.site-nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,241,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 16px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .nav-name {
+    font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600;
+    color: var(--ink); white-space: nowrap;
+  }
+  .nav-name span { color: var(--red); }
+  nav.links { display: flex; gap: 24px; flex-wrap: wrap; }
+  nav.links a {
+    color: var(--ink); font-size: 14.5px; font-weight: 700;
+    letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  nav.links a:hover { color: var(--red); text-decoration: none; }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+
+  .lang-toggle {
+    display: flex; border: 1px solid var(--ink); border-radius: 20px; overflow: hidden;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .lang-toggle button {
+    background: none; border: none; padding: 6px 14px; cursor: pointer;
+    color: var(--ink); font-family: inherit; font-size: inherit; font-weight: inherit;
+  }
+  .lang-toggle button.active { background: var(--ink); color: var(--paper); }
+
+  .nav-toggle-mobile { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-toggle-mobile svg { width: 26px; height: 26px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 86px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 48px; align-items: center;
+    position: relative; z-index: 1; padding-bottom: 56px;
+  }
+  .hero-eyebrow {
+    font-size: 13.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 18px;
+  }
+  .hero h1 {
+    color: #fff; font-size: clamp(32px, 4.6vw, 50px); line-height: 1.08; margin: 0 0 18px;
+  }
+  .hero-role {
+    font-size: 19px; color: var(--cream); opacity: 0.92; margin: 0 0 28px; max-width: 540px;
+  }
+  .hero-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-tags span {
+    font-size: 12.5px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+    color: var(--ink); background: var(--gold); padding: 6px 13px; border-radius: 20px;
+  }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 12px 24px; border-radius: 4px;
+    font-weight: 700; font-size: 14.5px; letter-spacing: 0.02em; cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); text-decoration: none; }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { background: var(--red-soft); }
+  .btn-ghost { background: transparent; border: 1.5px solid var(--cream); color: var(--cream); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+
+  .hero-portrait { border-radius: 6px; overflow: hidden; aspect-ratio: 4/5;
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.6);
+    border: 3px solid var(--gold);
+  }
+  .hero-portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+  .hero-strip {
+    background: var(--red); color: #fff; padding: 12px 0; overflow: hidden; white-space: nowrap;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .hero-strip-inner {
+    display: inline-flex; gap: 36px; font-weight: 700; font-size: 14px; letter-spacing: 0.03em;
+    text-transform: uppercase; animation: ticker 28s linear infinite;
+  }
+  .hero-strip-inner span { display: inline-flex; align-items: center; gap: 10px; }
+  .hero-strip-inner span::before { content: "●"; color: var(--gold); font-size: 9px; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .hero-strip-inner { animation: none; } }
+
+  /* ---------- Sections ---------- */
+  section { padding: 76px 0; }
+  section.alt { background: var(--cream); }
+  .section-head { margin-bottom: 40px; max-width: 680px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 10px;
+  }
+  .section-head h2 { font-size: clamp(28px, 3.4vw, 36px); margin: 0 0 14px; }
+  .section-head p.lede { font-size: 17.5px; color: #4a423a; margin: 0; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .about-grid p { margin: 0 0 18px; color: #332b24; }
+  .advisors {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 24px 26px;
+  }
+  .advisors h3 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 14px; color: var(--ink); }
+  .advisors ul { list-style: none; margin: 0; padding: 0; }
+  .advisors li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  .advisors li:first-child { border-top: none; }
+  .advisors li b { display: block; color: var(--ink); }
+  .advisors li span { color: #6b5f53; font-size: 13.5px; }
+
+  .timeline { margin-top: 28px; }
+  .tl-item { display: grid; grid-template-columns: 100px 1fr; gap: 18px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .tl-item:first-child { border-top: none; }
+  .tl-year { font-family: 'Fraunces', serif; font-weight: 700; color: var(--red); font-size: 15px; }
+  .tl-item h4 { margin: 0 0 4px; font-size: 16px; font-family: 'Source Sans 3', sans-serif; font-weight: 700; }
+  .tl-item p { margin: 0; font-size: 14.5px; color: #5a5048; }
+
+  /* Themes grid */
+  .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .theme-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 22px;
+    border-top: 4px solid var(--gold);
+  }
+  .theme-card h4 { margin: 0 0 8px; font-size: 16px; }
+  .theme-card p { margin: 0; font-size: 14.5px; color: #5a5048; }
+
+  /* Papo de Escola section */
+  .podcast-banner {
+    background: linear-gradient(120deg, var(--red) 0%, #9c1620 100%);
+    color: #fff; border-radius: 10px; padding: 36px; display: grid;
+    grid-template-columns: auto 1fr; gap: 24px; align-items: center; margin-bottom: 32px;
+  }
+  .podcast-icon {
+    width: 64px; height: 64px; border-radius: 50%; background: var(--gold);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .podcast-icon svg { width: 30px; height: 30px; color: var(--ink); }
+  .podcast-banner h3 { color: #fff; margin: 0 0 8px; font-size: 20px; }
+  .podcast-banner p { margin: 0; color: rgba(255,255,255,0.92); font-size: 15px; }
+  .ep-stat { font-family: 'Fraunces', serif; font-weight: 700; color: var(--gold); }
+
+  .ep-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .ep-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px;
+    font-size: 14px;
+  }
+  .ep-card .ep-year { font-weight: 800; color: var(--red); font-size: 12.5px; letter-spacing: 0.04em; }
+  .ep-card p { margin: 6px 0 0; color: #3a322b; }
+  .ep-more { text-align: center; margin-top: 22px; color: #6b5f53; font-size: 14.5px; }
+
+  /* Publications */
+  .pub-list { display: flex; flex-direction: column; gap: 18px; }
+  .pub-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px;
+    padding: 22px 24px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+  }
+  .pub-kind {
+    display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink); background: var(--gold-soft);
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+  }
+  .pub-card h4 { margin: 0 0 6px; font-size: 17px; font-family: 'Fraunces', serif; font-weight: 600; }
+  .pub-card .meta { font-size: 14px; color: #6b5f53; margin: 0; }
+  .pub-card .btn { white-space: nowrap; }
+  .pub-note { font-size: 12.5px; color: #8a7d6e; margin-top: -6px; }
+
+  /* Extension / community work */
+  .ext-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .ext-card {
+    background: var(--ink); color: var(--cream); border-radius: 8px; padding: 30px;
+  }
+  .ext-card h3 { color: var(--gold); font-size: 18px; margin: 0 0 12px; }
+  .ext-card p { color: rgba(245,239,227,0.88); font-size: 15px; margin: 0; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .contact-card {
+    background: var(--red); color: #fff; border-radius: 8px; padding: 32px;
+  }
+  .contact-card h3 { color: #fff; margin: 0 0 14px; font-size: 19px; }
+  .contact-card p { color: rgba(255,255,255,0.92); margin: 0 0 22px; }
+  .contact-links { display: flex; flex-direction: column; gap: 12px; }
+  .contact-links a {
+    color: #fff; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+  .contact-links a:hover { color: var(--cream); text-decoration: none; }
+
+  form.contact-form { display: flex; flex-direction: column; gap: 14px; }
+  form.contact-form label { font-size: 13.5px; font-weight: 700; color: var(--ink); }
+  form.contact-form input, form.contact-form textarea, form.contact-form select {
+    padding: 11px 14px; border: 1px solid var(--line); border-radius: 5px;
+    font-family: inherit; font-size: 15px; background: #fff;
+  }
+  form.contact-form button { align-self: flex-start; border: none; }
+
+  footer {
+    background: var(--ink); color: rgba(245,239,227,0.7); padding: 36px 0; font-size: 13.5px;
+  }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--gold); }
+
+  html[data-lang="pt"] [data-en-only] { display: none !important; }
+  html[data-lang="en"] [data-pt-only] { display: none !important; }
+
+  @media (max-width: 860px) {
+    nav.links { display: none; }
+    .nav-toggle-mobile { display: block; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-portrait { max-width: 280px; margin: 0 auto; order: -1; }
+    .about-grid, .ext-grid, .contact-grid { grid-template-columns: 1fr; }
+    .theme-grid, .ep-grid { grid-template-columns: 1fr; }
+    .pub-card { grid-template-columns: 1fr; }
+    .pub-card .btn { justify-self: start; }
+    .podcast-banner { grid-template-columns: 1fr; text-align: left; }
+  }
+
+  nav.links.mobile-open {
+    display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--paper); padding: 18px 28px; border-bottom: 1px solid var(--line); gap: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-name">Leandro <span>Rafael</span></div>
+    <nav class="links" id="navLinks">
+      <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#research" data-pt="Pesquisa" data-en="Research">Pesquisa</a>
+      <a href="#podcast" data-pt="Papo de Escola" data-en="Papo de Escola">Papo de Escola</a>
+      <a href="#publications" data-pt="Publicações" data-en="Publications">Publicações</a>
+      <a href="#extension" data-pt="Extensão" data-en="Outreach">Extensão</a>
+      <a href="#contact" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-toggle" id="langToggle">
+        <button type="button" data-set-lang="pt" class="active">PT</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle-mobile" id="mobileToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-eyebrow" data-pt="Doutorando em Estudos do Lazer · UFMG" data-en="PhD Candidate in Leisure Studies · UFMG">Doutorando em Estudos do Lazer · UFMG</div>
+      <h1 data-pt="Leandro Soares Assunção Rafael" data-en="Leandro Soares Assunção Rafael">Leandro Soares Assunção Rafael</h1>
+      <p class="hero-role" data-pt="Pesquisador das relações étnico-raciais, juventudes negras e cultura hip hop na escola. Professor de Educação Física, host do podcast Papo de Escola e voluntário do projeto Anjos d'Rua." data-en="Researcher of ethnic-racial relations, Black youth and hip hop culture in schools. Physical Education teacher, host of the Papo de Escola podcast, and volunteer with the Anjos d'Rua project.">
+        Pesquisador das relações étnico-raciais, juventudes negras e cultura hip hop na escola. Professor de Educação Física, host do podcast Papo de Escola e voluntário do projeto Anjos d'Rua.
+      </p>
+      <div class="hero-tags">
+        <span data-pt="Relações étnico-raciais" data-en="Ethnic-racial relations">Relações étnico-raciais</span>
+        <span data-pt="Hip Hop &amp; Danças" data-en="Hip Hop &amp; Dance">Hip Hop &amp; Danças</span>
+        <span data-pt="Recreio &amp; Lazer escolar" data-en="School Recess &amp; Leisure">Recreio &amp; Lazer escolar</span>
+        <span data-pt="Juventudes negras" data-en="Black Youth">Juventudes negras</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#podcast" class="btn btn-primary" data-pt="Ouvir Papo de Escola" data-en="Listen to Papo de Escola">Ouvir Papo de Escola</a>
+        <a href="#publications" class="btn btn-ghost" data-pt="Ver publicações" data-en="View publications">Ver publicações</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <img src="images/leandro.jpg" alt="Leandro Soares Assunção Rafael">
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="hero-strip-inner">
+        <span data-pt="37+ episódios do Papo de Escola" data-en="37+ episodes of Papo de Escola">37+ episódios do Papo de Escola</span>
+        <span data-pt="Doutorando EEFFTO/UFMG" data-en="PhD Candidate EEFFTO/UFMG">Doutorando EEFFTO/UFMG</span>
+        <span data-pt="Professor do Centro Pedagógico UFMG" data-en="Teacher at Centro Pedagógico UFMG">Professor do Centro Pedagógico UFMG</span>
+        <span data-pt="Voluntário · Anjos d'Rua" data-en="Volunteer · Anjos d'Rua">Voluntário · Anjos d'Rua</span>
+        <span data-pt="37+ episódios do Papo de Escola" data-en="37+ episodes of Papo de Escola">37+ episódios do Papo de Escola</span>
+        <span data-pt="Doutorando EEFFTO/UFMG" data-en="PhD Candidate EEFFTO/UFMG">Doutorando EEFFTO/UFMG</span>
+        <span data-pt="Professor do Centro Pedagógico UFMG" data-en="Teacher at Centro Pedagógico UFMG">Professor do Centro Pedagógico UFMG</span>
+        <span data-pt="Voluntário · Anjos d'Rua" data-en="Volunteer · Anjos d'Rua">Voluntário · Anjos d'Rua</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Sobre" data-en="About">Sobre</div>
+      <h2 data-pt="Educação Física, lazer e a escrevivência de uma trajetória negra" data-en="Physical Education, leisure, and the lived experience of a Black trajectory">Educação Física, lazer e a escrevivência de uma trajetória negra</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p data-pt="Sou doutorando do Programa de Pós-Graduação Interdisciplinar em Estudos do Lazer (EEFFTO/UFMG), mestre em Educação pelo Programa de Pós-Graduação em Educação: Conhecimento e Inclusão (FaE/UFMG) e licenciado em Educação Física pela UFMG." data-en="I am a PhD candidate in the Interdisciplinary Graduate Program in Leisure Studies (EEFFTO/UFMG), hold a Master's in Education from the Graduate Program in Education: Knowledge and Inclusion (FaE/UFMG), and a degree in Physical Education from UFMG.">
+          Sou doutorando do Programa de Pós-Graduação Interdisciplinar em Estudos do Lazer (EEFFTO/UFMG), mestre em Educação pelo Programa de Pós-Graduação em Educação: Conhecimento e Inclusão (FaE/UFMG) e licenciado em Educação Física pela UFMG.
+        </p>
+        <p data-pt="Sou professor pesquisador do Grupo de Estudos e Pesquisa Pensando a Educação Física Escolar (IFMG) e do grupo Áfricas e eu: Reconhecendo e valorizando a diversidade étnico-racial na educação básica, técnica e tecnológica (UFMG), além do grupo EduDança (UFMG). Sou professor do Centro Pedagógico, colégio de Educação Básica e Profissional da UFMG, e professor voluntário do projeto sociocultural Anjos d' Rua." data-en="I am a researcher with the Study and Research Group Thinking School Physical Education (IFMG) and with the group Áfricas e eu: Recognizing and valuing ethnic-racial diversity in basic, technical and technological education (UFMG), as well as the EduDança group (UFMG). I teach at Centro Pedagógico, UFMG's basic and professional education school, and volunteer as a teacher with the Anjos d'Rua sociocultural project.">
+          Sou professor pesquisador do Grupo de Estudos e Pesquisa Pensando a Educação Física Escolar (IFMG) e do grupo Áfricas e eu: Reconhecendo e valorizando a diversidade étnico-racial na educação básica, técnica e tecnológica (UFMG), além do grupo EduDança (UFMG). Sou professor do Centro Pedagógico, colégio de Educação Básica e Profissional da UFMG, e professor voluntário do projeto sociocultural Anjos d' Rua.
+        </p>
+        <p data-pt="Tenho interesse nos seguintes temas: intervalo escolar, relações étnico-raciais, juventudes, identidades, cultura negra, trajetórias escolares, formação de professores, Educação Física escolar, inclusão e lazer." data-en="My research interests include: school recess, ethnic-racial relations, youth, identity, Black culture, school trajectories, teacher education, school Physical Education, inclusion, and leisure.">
+          Tenho interesse nos seguintes temas: intervalo escolar, relações étnico-raciais, juventudes, identidades, cultura negra, trajetórias escolares, formação de professores, Educação Física escolar, inclusão e lazer.
+        </p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2025–</div>
+            <div>
+              <h4 data-pt="Doutorado em Estudos do Lazer (em andamento)" data-en="PhD in Leisure Studies (in progress)">Doutorado em Estudos do Lazer (em andamento)</h4>
+              <p data-pt="UFMG · Orientadora: Elisângela Chaves · Hip Hop, Danças, Relações étnico-raciais" data-en="UFMG · Advisor: Elisângela Chaves · Hip Hop, Dance, Ethnic-racial relations">UFMG · Orientadora: Elisângela Chaves · Hip Hop, Danças, Relações étnico-raciais</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2022–2024</div>
+            <div>
+              <h4 data-pt="Mestrado em Conhecimento e Inclusão Social em Educação" data-en="Master's in Knowledge and Social Inclusion in Education">Mestrado em Conhecimento e Inclusão Social em Educação</h4>
+              <p data-pt="FaE/UFMG · Encontros, desencontros e resistências: olhares de jovens negras/os sobre as relações étnico-raciais na escola" data-en="FaE/UFMG · Encounters, missed encounters and resistance: Black youth perspectives on ethnic-racial relations in school">FaE/UFMG · Encontros, desencontros e resistências: olhares de jovens negras/os sobre as relações étnico-raciais na escola</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2016–2021</div>
+            <div>
+              <h4 data-pt="Graduação em Educação Física" data-en="Bachelor's in Physical Education">Graduação em Educação Física</h4>
+              <p data-pt="UFMG · Recreio, lazer e juventudes: o recreio como possibilidade de fruição das práticas de lazer na escola" data-en="UFMG · Recess, leisure and youth: recess as a possibility for the enjoyment of leisure practices in school">UFMG · Recreio, lazer e juventudes: o recreio como possibilidade de fruição das práticas de lazer na escola</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="advisors">
+          <h3 data-pt="Orientação" data-en="Supervision">Orientação</h3>
+          <ul>
+            <li><b>Elisângela Chaves</b><span data-pt="Orientadora de doutorado · UFMG" data-en="PhD Advisor · UFMG">Orientadora de doutorado · UFMG</span></li>
+            <li><b>Geraldo Magela Pereira Leão</b><span data-pt="Orientador de mestrado · FaE/UFMG" data-en="Master's Advisor · FaE/UFMG">Orientador de mestrado · FaE/UFMG</span></li>
+            <li><b>Juliana Batista dos Reis</b><span data-pt="Coorientadora de mestrado" data-en="Master's Co-advisor">Coorientadora de mestrado</span></li>
+          </ul>
+        </div>
+        <div class="advisors" style="margin-top:18px;">
+          <h3 data-pt="Identificadores" data-en="Identifiers">Identificadores</h3>
+          <ul>
+            <li><b>Currículo Lattes</b><span><a href="http://lattes.cnpq.br/7950029245619971" target="_blank" rel="noopener">lattes.cnpq.br/7950029245619971</a></span></li>
+            <li><b>ORCID</b><span><a href="https://orcid.org/0000-0001-5998-4284" target="_blank" rel="noopener">0000-0001-5998-4284</a></span></li>
+          </ul>
+        </div>
+        <div class="advisors" style="margin-top:18px;">
+          <h3 data-pt="Prêmios" data-en="Awards">Prêmios</h3>
+          <ul>
+            <li><b data-pt="Prêmio Carta Convite — Microprojetos (2021)" data-en="Carta Convite Award — Microprojects (2021)">Prêmio Carta Convite — Microprojetos (2021)</b><span data-pt="Edital SECULT LAB 01/2021, Associação Querubins, via Lei Aldir Blanc" data-en="SECULT LAB Call 01/2021, Querubins Association, via the Aldir Blanc Law">Edital SECULT LAB 01/2021, Associação Querubins, via Lei Aldir Blanc</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="alt" id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Pesquisa" data-en="Research">Pesquisa</div>
+      <h2 data-pt="Linhas de pesquisa" data-en="Research lines">Linhas de pesquisa</h2>
+      <p class="lede" data-pt="Meu trabalho conecta lazer, escola e cultura negra, investigando como juventudes negras vivem, resistem e criam dentro e fora da sala de aula." data-en="My work connects leisure, school and Black culture, investigating how Black youth live, resist and create inside and outside the classroom.">
+        Meu trabalho conecta lazer, escola e cultura negra, investigando como juventudes negras vivem, resistem e criam dentro e fora da sala de aula.
+      </p>
+    </div>
+
+    <div class="theme-grid">
+      <div class="theme-card">
+        <h4 data-pt="Recreio e lazer escolar" data-en="School recess &amp; leisure">Recreio e lazer escolar</h4>
+        <p data-pt="Investigo o intervalo escolar como espaço de fruição do lazer e como território de disputa e expressão das juventudes." data-en="I investigate school recess as a space for leisure enjoyment and as a contested territory of youth expression.">Investigo o intervalo escolar como espaço de fruição do lazer e como território de disputa e expressão das juventudes.</p>
+      </div>
+      <div class="theme-card">
+        <h4 data-pt="Relações étnico-raciais" data-en="Ethnic-racial relations">Relações étnico-raciais</h4>
+        <p data-pt="Pesquiso encontros, desencontros e resistências de jovens negras/os nas relações étnico-raciais vividas na escola." data-en="I research the encounters, missed encounters and resistance of Black youth in the ethnic-racial relations experienced at school.">Pesquiso encontros, desencontros e resistências de jovens negras/os nas relações étnico-raciais vividas na escola.</p>
+      </div>
+      <div class="theme-card">
+        <h4 data-pt="Hip Hop e danças" data-en="Hip Hop &amp; dance">Hip Hop e danças</h4>
+        <p data-pt="No doutorado, investigo o hip hop e as danças como práticas corporais e pedagógicas ligadas às relações étnico-raciais." data-en="In my doctoral research, I investigate hip hop and dance as bodily and pedagogical practices linked to ethnic-racial relations.">No doutorado, investigo o hip hop e as danças como práticas corporais e pedagógicas ligadas às relações étnico-raciais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAPO DE ESCOLA -->
+<section id="podcast">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Mídia &amp; Divulgação" data-en="Media &amp; Outreach">Mídia &amp; Divulgação</div>
+      <h2 data-pt="Papo de Escola" data-en="Papo de Escola">Papo de Escola</h2>
+      <p class="lede" data-pt="Programa de rádio/TV que produzo e apresento, levando ao público conversas sobre educação, cultura e as relações étnico-raciais na escola." data-en="A radio/TV program I produce and host, bringing conversations about education, culture and ethnic-racial relations in schools to a wider audience.">
+        Programa de rádio/TV que produzo e apresento, levando ao público conversas sobre educação, cultura e as relações étnico-raciais na escola.
+      </p>
+    </div>
+
+    <div class="podcast-banner">
+      <div class="podcast-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </div>
+      <div>
+        <h3><span class="ep-stat">37+</span> <span data-pt="episódios já produzidos" data-en="episodes produced so far">episódios já produzidos</span></h3>
+        <p data-pt="Desde 2020, já conversei com professoras, professores e pesquisadores sobre temas como educação quilombola, juventudes negras, gênero, capoeira, BNCC, inclusão e muito mais." data-en="Since 2020, I've talked with teachers and researchers about topics like Quilombola education, Black youth, gender, capoeira, the national curriculum, inclusion and much more.">Desde 2020, já conversei com professoras, professores e pesquisadores sobre temas como educação quilombola, juventudes negras, gênero, capoeira, BNCC, inclusão e muito mais.</p>
+      </div>
+    </div>
+
+    <div class="ep-grid">
+      <div class="ep-card">
+        <div class="ep-year">2025</div>
+        <p data-pt="Podcast Folha na Escola — Entrevista" data-en="Podcast Folha na Escola — Interview">Podcast Folha na Escola — Entrevista</p>
+      </div>
+      <div class="ep-card">
+        <div class="ep-year">2023</div>
+        <p data-pt="Papo de Escola: Educação Quilombola e a Escola" data-en="Papo de Escola: Quilombola Education and School">Papo de Escola: Educação Quilombola e a Escola</p>
+      </div>
+      <div class="ep-card">
+        <div class="ep-year">2023</div>
+        <p data-pt="Papo de Escola: Reforma do Ensino Médio para quem?" data-en="Papo de Escola: High School Reform — for whom?">Papo de Escola: Reforma do Ensino Médio para quem?</p>
+      </div>
+      <div class="ep-card">
+        <div class="ep-year">2022</div>
+        <p data-pt="Papo de Escola: Educação e (In)visibilidades — Escolas dos Povos Indígenas" data-en="Papo de Escola: Education and (In)visibilities — Indigenous Peoples' Schools">Papo de Escola: Educação e (In)visibilidades — Escolas dos Povos Indígenas</p>
+      </div>
+      <div class="ep-card">
+        <div class="ep-year">2021</div>
+        <p data-pt="Papo de Escola: Educação e (In)visibilidades — Transexualidade e a Escola" data-en="Papo de Escola: Education and (In)visibilities — Transgender Identity and School">Papo de Escola: Educação e (In)visibilidades — Transexualidade e a Escola</p>
+      </div>
+      <div class="ep-card">
+        <div class="ep-year">2020</div>
+        <p data-pt="Papo de Escola: Relações étnico-raciais e a Escola" data-en="Papo de Escola: Ethnic-Racial Relations and School">Papo de Escola: Relações étnico-raciais e a Escola</p>
+      </div>
+    </div>
+    <p class="ep-more" data-pt="Lista completa de mais de 37 episódios disponível no Currículo Lattes." data-en="Full list of 37+ episodes available on the Lattes CV.">Lista completa de mais de 37 episódios disponível no Currículo Lattes.</p>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="alt" id="publications">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Publicações" data-en="Publications">Publicações</div>
+      <h2 data-pt="Livros, capítulos e artigos selecionados" data-en="Selected books, chapters &amp; articles">Livros, capítulos e artigos selecionados</h2>
+      <p class="lede" data-pt="Uma seleção da produção bibliográfica. A lista completa, incluindo trabalhos em anais de congressos, está disponível no Currículo Lattes." data-en="A selection of bibliographic output. The full list, including conference proceedings, is available on the Lattes CV.">
+        Uma seleção da produção bibliográfica. A lista completa, incluindo trabalhos em anais de congressos, está disponível no Currículo Lattes.
+      </p>
+    </div>
+
+    <div class="pub-list">
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Livro (organização)" data-en="Book (editor)">Livro (organização)</span>
+          <h4>Saberes da extensão: territórios e tecnologias sociais</h4>
+          <p class="meta">Tavares, M. L.; Fuccio, L. S. A.; Garcia, J. S.; <b>Rafael, L. S. A.</b> (Orgs.) — 1ª ed. Belo Horizonte: IFMG, 2025. v. 2. 280p.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Livro (organização)" data-en="Book (editor)">Livro (organização)</span>
+          <h4>Teko Porã: Entre travessuras e travessias que nos fazem perceber o bem-viver</h4>
+          <p class="meta">Santos, C. M.; <b>Rafael, L. S. A.</b>; Souza, R. P. A. (Orgs.) — 1ª ed. Belo Horizonte: SMED, 2024. v. 01. 71p.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Artigo em periódico" data-en="Journal article">Artigo em periódico</span>
+          <h4 data-pt="Recreio e adolescências: as práticas de lazer na escola" data-en="Recess and adolescence: leisure practices at school">Recreio e adolescências: as práticas de lazer na escola</h4>
+          <p class="meta"><b>Rafael, L. S. A.</b>; Silveira, G. C. F.; Chaves, E. — Pensar a Prática (online), v. 26, p. 00, 2023.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver periódico" data-en="View journal">Ver periódico</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Artigo em periódico" data-en="Journal article">Artigo em periódico</span>
+          <h4>"É preciso ver?": práticas de ensino inclusivas na Educação Física escolar</h4>
+          <p class="meta">Rafael, Leandro Soares Assunção; Fernandes, Gyna de Avila — Revista Motrivivência, v. 33, p. 1–21, 2021.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver periódico" data-en="View journal">Ver periódico</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Capítulo de livro" data-en="Book chapter">Capítulo de livro</span>
+          <h4 data-pt="Do Neguinho exótico ao negro professor: escrevivências sobre uma trajetória estudantil marcada pela potência das ações afirmativas" data-en="From exotic 'Neguinho' to Black teacher: writings on a student trajectory shaped by affirmative action">Do Neguinho exótico ao negro professor: escrevivências sobre uma trajetória estudantil marcada pela potência das ações afirmativas</h4>
+          <p class="meta"><b>Rafael, L. S. A.</b> In: Programa Ações Afirmativas na UFMG. Contagem: Escola Cidadã, 2024, p. 227–253.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+      <div class="pub-card">
+        <div>
+          <span class="pub-kind" data-pt="Capítulo de livro" data-en="Book chapter">Capítulo de livro</span>
+          <h4>Anjos D' Rua: Projeto sociocultural de dança como tecnologia social negra afirmativa</h4>
+          <p class="meta">Oliveira, B. D. R.; <b>Rafael, L. S. A.</b> In: Saberes da extensão: territórios e tecnologias sociais. Belo Horizonte: IFMG, 2025, p. 01–280.</p>
+        </div>
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener" data-pt="Ver na editora" data-en="View at publisher">Ver na editora</a>
+      </div>
+
+    </div>
+    <p class="pub-note" data-pt="* Links serão atualizados conforme disponibilidade nas páginas das editoras/periódicos." data-en="* Links will be updated as they become available on publisher/journal pages.">* Links serão atualizados conforme disponibilidade nas páginas das editoras/periódicos.</p>
+  </div>
+</section>
+
+<!-- EXTENSION / COMMUNITY -->
+<section id="extension">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Extensão &amp; Comunidade" data-en="Outreach &amp; Community">Extensão &amp; Comunidade</div>
+      <h2 data-pt="Pesquisa que caminha com a comunidade" data-en="Research that walks with the community">Pesquisa que caminha com a comunidade</h2>
+    </div>
+
+    <div class="ext-grid">
+      <div class="ext-card">
+        <h3>Anjos d' Rua</h3>
+        <p data-pt="Atuo como professor voluntário neste projeto sociocultural, que utiliza a dança como tecnologia social negra afirmativa, conectando juventudes a práticas corporais de pertencimento e resistência." data-en="I serve as a volunteer teacher in this sociocultural project, which uses dance as an affirmative Black social technology, connecting youth to bodily practices of belonging and resistance.">Atuo como professor voluntário neste projeto sociocultural, que utiliza a dança como tecnologia social negra afirmativa, conectando juventudes a práticas corporais de pertencimento e resistência.</p>
+      </div>
+      <div class="ext-card">
+        <h3 data-pt="Áfricas e eu" data-en="Áfricas e eu">Áfricas e eu</h3>
+        <p data-pt="Grupo de pesquisa da UFMG dedicado a reconhecer e valorizar a diversidade étnico-racial na educação básica, técnica e tecnológica." data-en="A UFMG research group dedicated to recognizing and valuing ethnic-racial diversity in basic, technical and technological education.">Grupo de pesquisa da UFMG dedicado a reconhecer e valorizar a diversidade étnico-racial na educação básica, técnica e tecnológica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-pt="Contato" data-en="Contact">Contato</div>
+      <h2 data-pt="Vamos conversar" data-en="Let's talk">Vamos conversar</h2>
+      <p class="lede" data-pt="Para convites de entrevista no Papo de Escola, colaborações de pesquisa, palestras ou parcerias com o Anjos d'Rua — entre em contato." data-en="For interview invitations on Papo de Escola, research collaborations, talks, or partnerships with Anjos d'Rua — get in touch.">
+        Para convites de entrevista no Papo de Escola, colaborações de pesquisa, palestras ou parcerias com o Anjos d'Rua — entre em contato.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 data-pt="Contato direto" data-en="Direct contact">Contato direto</h3>
+        <p data-pt="Resposta em até alguns dias úteis." data-en="Response within a few business days.">Resposta em até alguns dias úteis.</p>
+        <div class="contact-links">
+          <a href="mailto:leandro.rafael@exemplo.com">leandro.rafael@exemplo.com</a>
+          <a href="http://lattes.cnpq.br/7950029245619971" target="_blank" rel="noopener">Currículo Lattes</a>
+          <a href="https://orcid.org/0000-0001-5998-4284" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/yourFormId" method="POST">
+        <label for="name" data-pt="Nome" data-en="Name">Nome</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email" data-pt="E-mail" data-en="Email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic" data-pt="Motivo do contato" data-en="Reason for contact">Motivo do contato</label>
+        <select id="topic" name="topic">
+          <option data-pt="Convite para o Papo de Escola" data-en="Invitation for Papo de Escola">Convite para o Papo de Escola</option>
+          <option data-pt="Colaboração de pesquisa" data-en="Research collaboration">Colaboração de pesquisa</option>
+          <option data-pt="Palestra ou formação" data-en="Talk or training">Palestra ou formação</option>
+          <option data-pt="Outro" data-en="Other">Outro</option>
+        </select>
+
+        <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn btn-primary" data-pt="Enviar mensagem" data-en="Send message">Enviar mensagem</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div data-pt="© 2026 Leandro Soares Assunção Rafael. Todos os direitos reservados." data-en="© 2026 Leandro Soares Assunção Rafael. All rights reserved.">© 2026 Leandro Soares Assunção Rafael. Todos os direitos reservados.</div>
+    <div>
+      <a href="http://lattes.cnpq.br/7950029245619971" target="_blank" rel="noopener">Lattes</a> ·
+      <a href="https://orcid.org/0000-0001-5998-4284" target="_blank" rel="noopener">ORCID</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+    document.querySelectorAll('[data-pt][data-en]').forEach(function(el) {
+      var val = lang === 'pt' ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+      if (val !== null) el.innerHTML = val;
+    });
+    document.querySelectorAll('#langToggle button').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
+    });
+    localStorage.setItem('site-lang', lang);
+  }
+
+  document.querySelectorAll('#langToggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setLang(btn.getAttribute('data-set-lang'));
+    });
+  });
+
+  var saved = null;
+  try { saved = localStorage.getItem('site-lang'); } catch(e) {}
+  if (saved === 'en') setLang('en');
+
+  var mobileToggle = document.getElementById('mobileToggle');
+  var navLinks = document.getElementById('navLinks');
+  mobileToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('mobile-open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { navLinks.classList.remove('mobile-open'); });
+  });
+</script>
+
+</body>
+</html>
